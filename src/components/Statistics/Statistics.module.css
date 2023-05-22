@@ -14,7 +14,7 @@
     color: #41383b;
   }
   
-  .stats__list {
+  .statslist {
     width: 400px;
     display: flex;
     justify-content: space-evenly;

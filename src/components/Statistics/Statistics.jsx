@@ -1,5 +1,5 @@
 import css from './Statistics.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const getColor = () => {
   const color =
@@ -21,7 +21,7 @@ export const Statistics = ({ title, stats }) => {
     <section className={css.statistics}>
       {title && <h2 className={css.title}>{title}</h2>}
 
-      <ul className={css.stats__list}>
+      <ul className={css.statslist}>
         {stats.map(({ id, label, percentage }) => {
           return (
             <li
@@ -39,9 +39,18 @@ export const Statistics = ({ title, stats }) => {
   );
 };
 
-Statistics.propTypes = {
-  label: propTypes.string.isRequired,
-  percentage: propTypes.number.isRequired,
+Statistics.defaultProps = {
+  title: '',
 };
 
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
 export default Statistics;
