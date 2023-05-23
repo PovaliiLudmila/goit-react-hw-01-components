@@ -1,18 +1,4 @@
-.friends {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    flex-direction: column;
-    width: 400px;
-  }
-  
-  .friends__list {
-    display: flex;
-    flex-direction: column;
-    width: inherit;
-    padding: 0;
-  }
-  .friends__item {
+.friends__item {
     display: flex;
     align-items: center;
     box-shadow: 0 0 10px #dadfdfed;
@@ -25,13 +11,6 @@
     border-radius: 50%;
     margin-right: 20px;
   }
-  .true {
-    background-color: green;
-  }
-  .false {
-    background-color: red;
-  }
-  
   .avatar {
     width: 100px;
     margin-right: 10px;
@@ -42,3 +21,10 @@
     margin-bottom: 15px;
     color: #524a4d;
   }
+  .true {
+    background-color: green;
+  }
+  .false {
+    background-color: red;
+  }
+  

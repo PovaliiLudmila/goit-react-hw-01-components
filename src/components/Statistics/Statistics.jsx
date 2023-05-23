@@ -1,21 +1,6 @@
 import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
-
-const getColor = () => {
-  const color =
-    'rgba(' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    0.5 +
-    ')';
-
-  return color;
-};
-
+import {getColor} from 'functions/function.js';
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
